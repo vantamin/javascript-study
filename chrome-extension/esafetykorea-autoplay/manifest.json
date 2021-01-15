@@ -1,0 +1,19 @@
+{
+  "name": "esafetykorea autoplay",
+  "version": "1.0",
+  "description": "esafetykorea autoplay",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*.esafetykorea.or.kr/*"
+      ],
+      "include_globs": [
+        "*esafetykorea.or.kr/lms/plugin/player/*"
+      ],
+      "js": [
+        "contentScript.js"
+      ]
+    }
+  ]
+}
