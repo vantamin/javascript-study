@@ -57,3 +57,42 @@ for (var counter = 20; ; counter++) {
   if (current % 7 == 0) break;
 }
 current;
+
+for (var current = 20; current % 7 != 0; current++); // 아무 일도 하지 않음
+
+/**
+ * 간결한 방식의 변수 갱신
+ */
+
+var result = 1;
+for (var counter = 0; counter < 10; counter++) result *= 2;
+
+/**
+ * switch를 이용한 분기
+ */
+switch (prompt('날씨가 어때요?')) {
+  case '비':
+    console.log('우산을 꼭 가져오세요.');
+    break;
+  case '맑음':
+    console.log('옷차림을 가볍게 하세요.');
+  case '흐림':
+    console.log('외출하기에 좋습니다.');
+    break;
+  default:
+    console.log('날씨가 어떤지 알 수 없음!');
+    break;
+}
+
+/**
+ * 주석(comment)
+ */
+// 곧 정의할 counter 변수는
+// 값을 0부터 시작한다.
+var counter = 0;
+// 이어서 구문을 반복한다. 모자를 꽉 잡아라.
+while (counter < 100 /* counter가 100 보다 작다 */)
+  /* 반복문을 실행할 때마다 counter의 값을 증가시킨다.
+  counter에 1을 더한다고 보면 된다. */
+  counter++;
+// 여기까지 오면 프로그램이 끝난다.
