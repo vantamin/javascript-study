@@ -25,7 +25,7 @@ $ open /Applications/Sourcetree.app
 
 **터미널로 Sourcetree.app를 실행해야만 Sourcetree에서 Git Hook이 동작**
 
-## Stoudy History
+## Study History
 
 - [자바스크립트 개론](https://eloquentjavascript.net/)
 
