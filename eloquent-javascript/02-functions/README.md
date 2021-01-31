@@ -21,7 +21,7 @@ function power(base, exponent) {
 power(2, 10);
 ```
 
-## 정의 순서
+### 정의 순서
 
 ```jsx
 console.log('미래에서 말하길:', future());
@@ -31,7 +31,7 @@ function future() {
 }
 ```
 
-## 지역 변수
+### 지역 변수
 
 ```jsx
 var x = 'A';
@@ -50,7 +50,7 @@ setVarToC();
 x; // 'B'
 ```
 
-## 중첩된 유효범위(scope)
+### 중첩된 유효범위(scope)
 
 ```jsx
 function multiplyAbsolute(number, factor) {
@@ -73,13 +73,13 @@ var someting = 1;
 // 블록 바깥
 ```
 
-## 스택(stack)
+### 스택(stack)
 
 함수가 호출되고 반환하는 방식
 
 함수의 본문이 실행되는 동안 컴퓨터가 나중에 실행을 계속할 지점을 알 수 있게 함수를 호출한 문맥(context)을 저장하는 곳이 스택이다.
 
-## 함수 값
+### 함수 값
 
 일급(first-class) 특성("함수는 값이다.")
 
@@ -109,9 +109,9 @@ var a = null;
 // 'B'
 ```
 
-## [클로저](/closure.js)
+### [클로저](/closure.js)
 
-## 선택 인자
+### 선택 인자
 
 ```jsx
 function power(base, exponent) {
@@ -120,4 +120,52 @@ function power(base, exponent) {
   for (var count = 0; count < exponent; count++) result *= base;
   return result;
 }
+```
+
+## 기법
+
+### 중복 방지
+
+```jsx
+var number = 5;
+if (number < 10) console.lg('0', number);
+else console.log(number);
+```
+
+```jsx
+function zeroPad(number, width) {
+  var string = String(Math.round(number));
+  while (string.length < width) string = '0' + string;
+  return string;
+}
+```
+
+### 재귀
+
+```jsx
+function power(base, exponent) {
+  if (exponent == 0) return 1;
+  else return base * power(base, exponent - 1);
+}
+```
+
+자바스크립트에서는 간단한 반복문을 실행하는 것이 함수를 여러 번 호출하는 것보다 상당히 비용이 적게 든다.
+
+재귀가 늘 반복문에 대해 덜 효율적인 대안에 불과한 것은 아니다.
+
+```jsx
+function findSequence(goal) {
+  function find(start, history) {
+    if (start == goal) return history;
+    else if (start > goal) return null;
+    else
+      return (
+        find(start + 5, '(' + history + ' + 5)') ||
+        find(start * 3, '(' + history + ' * 3)')
+      );
+  }
+  return find(1, '1');
+}
+
+findSequence(24);
 ```
