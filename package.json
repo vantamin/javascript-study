@@ -5,6 +5,9 @@
   "repository": "https://github.com/vantamin/javascript-study.git",
   "author": "vantamin <vantablack.min@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "tsc"
+  },
   "devDependencies": {
     "husky": ">=4",
     "lint-staged": ">=10",
