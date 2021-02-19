@@ -422,3 +422,39 @@ function oldestCat(data) {
   else return oldest.name;
 }
 ```
+
+## 심화 이론
+
+### 인자 객체
+
+함수가 호출될 때마다 arguments라는 특별한 변수가 실행환경에 추가된다. arguments는 배열과 비슷하지만 실제로 배열이 아니다.
+
+```jsx
+function argumentCounter() {
+  return arguments.length + '개의 인자를 전달하셨습니다.';
+}
+argumentCounter('허수아비', '동의어', '인신공격'); // '3개의 인자를 전달하셨습니다.'
+```
+
+```jsx
+function range(start, end) {
+  if (argments.length < 2) {
+    end = start;
+    start = 0;
+  }
+  var result = [];
+  for (var i = start; i <= end; i++) result.push(i);
+  return result;
+}
+
+range(4); // [0, 1, 2, 3, 4]
+range(2, 4); // [2, 3, 4]
+```
+
+### 수학 객체
+
+삼각함수([Math.cos, sin, tan, acos, asin, atan]), pie(Math.PI), e(Math.E), 제곱(Math.pow), 제곱근(Math.sqrt), 최댓값(Math.max), 최솟값(Math.min), 반올림(Math.round), 내림(Math.floor), 올림(Math.ceil)
+
+### 열거형 프로퍼티
+
+객체의 일부 프로퍼티(length나 push, join)는 in 반복문으로부터 감춰져 있다. 이를 '열거할 수 있지 않다(not enumerable)'라고 한다.
