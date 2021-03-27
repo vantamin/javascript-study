@@ -7,3 +7,5 @@ const base64 = ((window) => {
 
   return { encode, decode };
 })(window);
+
+module.exports = base64;
