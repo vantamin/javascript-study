@@ -30,6 +30,8 @@ $ open /Applications/Sourcetree.app
 - [자바스크립트 개론](https://eloquentjavascript.net/)
 - [PoiemaWeb](https://poiemaweb.com/)
 - [Jest · 🃏 Delightful JavaScript Testing](https://jestjs.io/)
+- [Redux](https://ko.redux.js.org/)
+- [Vue.js](https://kr.vuejs.org/)
 
 ## 북마크
 
